@@ -1,0 +1,16 @@
+﻿<Application
+    x:Class="CayAiguisay.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CayAiguisay">
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="caBackground" Color="#F9F7F7" />
+        <SolidColorBrush x:Key="caGrey" Color="#DBE2EF" />
+        <SolidColorBrush x:Key="caLightBlue" Color="#3F72AF" />
+        <SolidColorBrush x:Key="caDarkBlue" Color="#112D4E" />
+        <SolidColorBrush x:Key="caLightYellow" Color="#F6F2D4" />
+        <SolidColorBrush x:Key="caWaterGreen" Color="#95D1CC" />
+    </Application.Resources>
+
+</Application>

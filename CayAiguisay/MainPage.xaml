@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="CayAiguisay.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CayAiguisay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource caBackground}">
+
+    <Grid x:Name="BaseGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25">
+            </RowDefinition> <!-- Title Bar -->
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="TitleBarGrid" Grid.Row="1"> <!-- Title Bar Grid -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <!-- Profil display -->
+                <ColumnDefinition Width="2*" ></ColumnDefinition>
+                <!-- Search Bar -->
+                <ColumnDefinition></ColumnDefinition>
+                <!-- Settings -->
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="backBtn" 
+                        Margin="10, 0, 10, 0" 
+                        Background="{StaticResource caLightBlue}">
+                    <Image Source="Assets/images/arrowL.png" />
+                </Button>
+                <Button x:Name="fwdBtn"
+                        Background="{StaticResource caLightBlue}">
+                    <Image Source="Assets/images/arrowR.png" />
+                </Button>
+            </StackPanel>
+            <TextBox x:Name="SearchBar" 
+                       Grid.Column="1" 
+                       TextWrapping="NoWrap" 
+                       Height="25"
+                       VerticalContentAlignment="Center"
+                       PlaceholderText="Search...">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#33000000"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button Content="Settings" 
+                    Grid.Column="2" 
+                    HorizontalAlignment="Right"
+                    Margin="0,0,10,0">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+        </Grid>
+        <WebView Source="http://www.google.com" Grid.Row="2">
+        </WebView>
+    </Grid>
+</Page>
