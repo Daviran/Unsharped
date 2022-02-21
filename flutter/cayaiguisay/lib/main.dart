@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:cayaiguisay/api/getToken.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,9 +31,9 @@ class MyApp extends StatelessWidget {
                   primary: Colors.green[600],
                 ),
                 onPressed: () {
-    
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>  getToken()));
                 },
-                child: const Text('Se connecter via Reddit: \u{279C}'),
+                child: const Text('Se connecter via Reddit:'),
               ),
               Text('C est quoi ce binze!')
             ]
@@ -42,4 +43,5 @@ class MyApp extends StatelessWidget {
       )
     );
   }
+  
 }
