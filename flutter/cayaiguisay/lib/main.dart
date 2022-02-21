@@ -17,12 +17,29 @@ class MyApp extends StatelessWidget {
       title: 'CayAiguisay',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Le Reddit Eco+'),
+          backgroundColor: Colors.green[500],
+          title: const Text('Reddit eco + '),
         ),
-        body: const Center(
-          child: Text('Bienvenue sur notre application'),
-        ),
-      ),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[600],
+                ),
+                onPressed: () {
+    
+                },
+                child: const Text('Se connecter via Reddit: \u{279C}'),
+              ),
+              Text('C est quoi ce binze!')
+            ]
+          ),
+        )
+      )
+      )
     );
   }
 }
