@@ -5,15 +5,15 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
+8        android:minSdkVersion="19"
 9        android:targetSdkVersion="31" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/home/squalli/Documents/cay_pas_si_sharp/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/home/squalli/Documents/cay_pas_si_sharp/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/debug/AndroidManifest.xml:6:22-64
 15
 16    <application
 17        android:name="android.app.Application"
@@ -46,27 +46,44 @@
 43
 44                <category android:name="android.intent.category.LAUNCHER" />
 45            </intent-filter>
-46        </activity>
-47        <!--
-48             Don't delete the meta-data below.
-49             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-50        -->
-51        <meta-data
-52            android:name="flutterEmbedding"
-53            android:value="2" />
-54
-55        <uses-library
-55-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-56            android:name="androidx.window.extensions"
-56-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-57            android:required="false" />
-57-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-58        <uses-library
-58-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-59            android:name="androidx.window.sidecar"
-59-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-60            android:required="false" />
-60-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-61    </application>
+46            <intent-filter android:label="flutter_web_auth" >
+47                <action android:name="android.intent.action.VIEW" />
+48
+49                <category android:name="android.intent.category.DEFAULT" />
+50                <category android:name="android.intent.category.BROWSABLE" />
+51
+52                <data android:scheme="unsharp" />
+53            </intent-filter>
+54        </activity>
+55        <!--
+56             Don't delete the meta-data below.
+57             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+58        -->
+59        <meta-data
+60            android:name="flutterEmbedding"
+61            android:value="2" />
 62
-63</manifest>
+63        <activity
+63-->[:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+64            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+64-->[:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
+65            android:exported="false"
+65-->[:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+66            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+66-->[:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+67
+68        <uses-library
+68-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+69            android:name="androidx.window.extensions"
+69-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+70            android:required="false" />
+70-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+71        <uses-library
+71-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+72            android:name="androidx.window.sidecar"
+72-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+73            android:required="false" />
+73-->[androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+74    </application>
+75
+76</manifest>

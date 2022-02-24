@@ -37,6 +37,10 @@ dependencies:
   oauth2: ^2.0.0
   dio: ^4.0.4
   http: ^0.13.4
+  url_launcher: ^6.0.20
+  uni_links: ^0.5.1
+  webview_flutter: ^3.0.0
+  flutter_web_auth: ^0.4.0
 
 dev_dependencies:
   flutter_test:
