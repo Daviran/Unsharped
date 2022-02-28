@@ -16,10 +16,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   var loggedIn = null;
-  var redditUser = null;
   var pseudo = null;
   List subredditList = [];
-  var profilPic = null;
+  Map userData = {};
 
   void logout() {
     setState(() {
@@ -68,12 +67,13 @@ class _MyAppState extends State<MyApp> {
     subredditList = await subreddit.toList();
     var userRedditor = await reddit.user.me();
     setState(() {
-      redditUser = reddit.user;
       loggedIn = userRedditor;
       pseudo = userRedditor?.displayName;
       subredditList = subredditList;
+      userData = (userRedditor?.data as Map<dynamic, dynamic>);
     });
-
+    print(userData['icon_img']);
+    print(subredditList[0]['subscribers']);
     return (userRedditor as Redditor);
   }
 
@@ -100,7 +100,9 @@ class _MyAppState extends State<MyApp> {
                   children: <Widget>[
                     Text('Subreddits'),
                     Text('Hello ' + pseudo),
-                    //Image(image: loggedIn?.icon_img),
+                    Image.network(userData['icon_img']),
+                    Text(
+                        'description: ' + userData['subreddit']['description']),
                     ElevatedButton(
                       child: Text('logout'),
                       onPressed: () {
@@ -108,12 +110,14 @@ class _MyAppState extends State<MyApp> {
                       },
                     ),
                     ...subredditList
-                        .map((el) => ListView(
+                        .map((el) => Column(
                               children: <Widget>[
+                                Image.network(el['header_img']),
                                 Text(el.title),
+                                Text(el['subscribers']),
                               ],
                             ))
-                        .toList()
+                        .toList(),
                   ],
                 ),
         ),
