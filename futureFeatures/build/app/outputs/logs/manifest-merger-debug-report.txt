@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:3:4-42:19
+INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:3:4-48:19
 MERGED from [:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.window:window:1.0.0-beta04] /home/squalli/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
@@ -14,11 +14,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/squal
 	android:name
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
-INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
-MERGED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
+ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
+INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
+INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
+INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
+MERGED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
 MERGED from [:flutter_web_auth] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/flutter_web_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:url_launcher_android] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
 MERGED from [:uni_links] /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/uni_links/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -52,11 +52,11 @@ INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/ap
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:1-49:12
 		INJECTED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/squalli/Documents/cay_pas_si_sharp/futureFeatures/android/app/src/main/AndroidManifest.xml:1:11-69

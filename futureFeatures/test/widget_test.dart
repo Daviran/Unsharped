@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:cay_pas_si_sharp/main.dart';
+import 'package:cay_pas_si_sharp/reMain.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
