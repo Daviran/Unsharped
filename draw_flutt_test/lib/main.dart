@@ -16,6 +16,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   var loggedIn = null;
+  var redditUser = null;
+  var pseudo = null;
+  List subredditList = [];
+  var profilPic = null;
+
+  void logout() {
+    setState(() {
+      loggedIn = null;
+    });
+  }
 
   Future<Redditor> authenticate() async {
     final userAgent = 'CayPasSiAiguisay';
@@ -52,18 +62,18 @@ class _MyAppState extends State<MyApp> {
     // If everything worked correctly, we should be able to retrieve
     // information about the authenticated account.
     print(await reddit.user.me());
-    print(reddit.user);
     List friendsUsers = await reddit.user.friends();
-    print(friendsUsers);
 
     Stream<Subreddit> subreddit = reddit.user.subreddits();
-    print(await subreddit.length);
-    subreddit.listen(print);
-
+    subredditList = await subreddit.toList();
     var userRedditor = await reddit.user.me();
     setState(() {
+      redditUser = reddit.user;
       loggedIn = userRedditor;
+      pseudo = userRedditor?.displayName;
+      subredditList = subredditList;
     });
+
     return (userRedditor as Redditor);
   }
 
@@ -87,7 +97,24 @@ class _MyAppState extends State<MyApp> {
                 )
               : Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[Text('Subreddits'), Text('SubPoulet')],
+                  children: <Widget>[
+                    Text('Subreddits'),
+                    Text('Hello ' + pseudo),
+                    //Image(image: loggedIn?.icon_img),
+                    ElevatedButton(
+                      child: Text('logout'),
+                      onPressed: () {
+                        logout();
+                      },
+                    ),
+                    ...subredditList
+                        .map((el) => ListView(
+                              children: <Widget>[
+                                Text(el.title),
+                              ],
+                            ))
+                        .toList()
+                  ],
                 ),
         ),
       ),
