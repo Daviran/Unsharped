@@ -1,0 +1,4 @@
+#Fri Feb 25 14:49:08 CET 2022
+base.0=/home/squalli/Documents/cay_pas_si_sharp/futureFeatures/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
