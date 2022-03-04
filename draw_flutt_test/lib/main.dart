@@ -1,3 +1,5 @@
+import 'package:draw_flutt_test/controllers/unsharp_page.dart';
+
 import './controllers/subreddit_page.dart';
 import 'package:flutter/material.dart';
 import './controllers/redditor_page.dart';
@@ -13,8 +15,9 @@ import './controllers/settings_page.dart';
 void main() async {
   await dotenv.load(fileName: '.env');
   RedditInterface interface = RedditInterface();
+  print(interface);
   GetIt.I.registerSingleton<RedditInterface>(interface);
-  await interface.restoreAPIConnection();
+  //await interface.restoreAPIConnection();
   runApp(MyApp(connected: interface.connected));
 }
 
@@ -27,15 +30,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'flapp',
-        theme:
-            ThemeData(brightness: Brightness.dark, primaryColor: Colors.white),
+        title: 'Unsharp',
+        theme: ThemeData(
+            brightness: Brightness.light,
+            primaryColor: Color.fromARGB(255, 0, 0, 0)),
         initialRoute: connected ? "/home" : "/login",
         onGenerateRoute: (settings) {
           Map routes = {
             '/login': () => const LoginPageController(),
             '/user': () => const RedditorPageController(),
-            '/home': () => const HomePageController(),
+            '/home': () =>
+                const UnsharpPageController(), //HomePageController(),
             '/search': () => const SearchPageController(),
             '/subreddit': () => const ExtractArgumentsSubredditPage(),
             '/post': () => const ExtractArgumentsPostPage(),

@@ -18,6 +18,7 @@ class Redditor {
   final int karma;
   final DateTime ancientness;
   final List<String> subscribedSubreddits;
+  final List<draw.Subreddit> subSubreddits;
   Map<String, dynamic> prefs;
 
   draw.Redditor drawInterface;
@@ -26,7 +27,8 @@ class Redditor {
       {Key? key,
       required this.drawInterface,
       required this.subscribedSubreddits,
-      required this.prefs})
+      required this.prefs,
+      required this.subSubreddits})
       : description = HtmlUnescape()
             .convert(drawInterface.data!["subreddit"]["public_description"]),
         bannerUrl = HtmlUnescape()
@@ -50,7 +52,6 @@ class Redditor {
     return subs;
   }
 
-  /// Get the posts from the user
   Future<List<Post>> getPosts() async {
     List<Post> posts = [];
 
@@ -60,7 +61,6 @@ class Redditor {
     return posts;
   }
 
-  /// Get the comments from the user
   Future<List<Comment>> getComments() async {
     List<Comment> comments = [];
 
