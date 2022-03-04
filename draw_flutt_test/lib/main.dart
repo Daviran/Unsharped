@@ -17,7 +17,6 @@ void main() async {
   RedditInterface interface = RedditInterface();
   print(interface);
   GetIt.I.registerSingleton<RedditInterface>(interface);
-  //await interface.restoreAPIConnection();
   runApp(MyApp(connected: interface.connected));
 }
 
