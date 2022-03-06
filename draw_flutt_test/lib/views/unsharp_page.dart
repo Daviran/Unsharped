@@ -9,9 +9,9 @@ import './../models/reddit_interface.dart';
 import './UnsharpEndDrawer.dart';
 
 class UnsharpPage extends StatefulWidget {
-  final Widget? body;
-  final String? title;
-  const UnsharpPage({
+  Widget? body;
+  String? title;
+  UnsharpPage({
     Key? key,
     this.title,
     this.body,
@@ -43,6 +43,8 @@ class _UnsharpPageState extends State<UnsharpPage> {
 
   void _onItemTapped(int index) {
     _selectedIndex = index;
+    widget.body = null;
+    widget.title = null;
 
     switch (_selectedIndex) {
       case 0:
@@ -67,6 +69,7 @@ class _UnsharpPageState extends State<UnsharpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromRGBO(129, 50, 168, 1),
         elevation: 0,
         title: widget.title == null

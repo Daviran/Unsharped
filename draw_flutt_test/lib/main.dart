@@ -15,7 +15,6 @@ import './controllers/settings_page.dart';
 void main() async {
   await dotenv.load(fileName: '.env');
   RedditInterface interface = RedditInterface();
-  print(interface);
   GetIt.I.registerSingleton<RedditInterface>(interface);
   runApp(MyApp(connected: interface.connected));
 }

@@ -6,6 +6,6 @@ class UnsharpPageController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const UnsharpPage();
+    return UnsharpPage();
   }
 }

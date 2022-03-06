@@ -19,7 +19,7 @@ class _PostPageViewState extends State<PostPageView> {
   @override
   Widget build(BuildContext context) {
     if (widget.post == null) {
-      return const UnsharpPage(title: "", body: LoadingWidget());
+      return UnsharpPage(title: "", body: const LoadingWidget());
     }
     Post post = widget.post as Post;
     return UnsharpPage(
