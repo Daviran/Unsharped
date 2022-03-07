@@ -1,5 +1,5 @@
 # Documentation Technique
-Cette documentation reprend tout le nécessaire pour comprendre les appels API utilisés avec DRAW ( framework Flutter pour Reddit API)
+Cette documentation reprend tout le nécessaire pour comprendre les appels API utilisés avec DRAW ( package Dart pour Reddit API)
 
 # Utilisation de l'API de Reddit
 
@@ -71,4 +71,4 @@ Future<void> main() async {
   print("My name is ${currentUser.displayName}");
 }
 ```
-
+La logique est répertoriée dans le dossier **Models**, nous avons respecté la convention MVC ( Model/View/Controller) 
