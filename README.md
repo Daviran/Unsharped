@@ -22,5 +22,5 @@ Unsharped est un projet à l'origine conçu en C#, puis après une bonne semaine
 
 ## Documentation technique
 
-Cliquez [ici]() pour la documentation technique <br>
+Cliquez [ici](https://github.com/EpitechMscProPromo2024/T-DEV-600-LIL-6-1-redditech-david.bugnon/blob/main/docuTech.md) pour la documentation technique <br>
 Et [ici]() pour la documentation utilisateur
