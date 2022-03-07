@@ -7,7 +7,6 @@ import './../models/reddit_interface.dart';
 import './../models/subreddit.dart';
 import './../models/comment.dart';
 
-/// Controller for a redditor's page
 class RedditorPageController extends StatefulWidget {
   const RedditorPageController({Key? key}) : super(key: key);
 

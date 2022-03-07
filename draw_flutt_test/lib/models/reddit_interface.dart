@@ -29,9 +29,17 @@ class RedditInterface {
 
     prefs = Map<String, dynamic>.from(await reddit.get('/api/v1/me/prefs',
         params: {"raw_json": "1"}, objectify: false));
+
+    final subSubredditStream = reddit.user.subreddits();
+    List<draw.Subreddit> subs = [];
+    await for (var sub in subSubredditStream) {
+      subs.add(sub);
+    }
+
     loggedRedditor = Redditor.fromDRAW(
         drawInterface: loggedUser as draw.Redditor,
         subscribedSubreddits: subredditSubscribed,
+        subSubreddits: subs,
         prefs: prefs);
     return loggedRedditor;
   }
@@ -47,8 +55,6 @@ class RedditInterface {
     return sublist;
   }
 
-  /// Get a subreddit with name
-  /// The subreddit get a certain number of posts
   Future<Subreddit> getSubreddit(String name, {bool loadPosts = true}) async {
     draw.SubredditRef subRef = reddit.subreddit(name);
     draw.Subreddit sub = await subRef.populate();
@@ -62,32 +68,29 @@ class RedditInterface {
     return Subreddit.fromDRAW(sub, posts);
   }
 
-  /// Create an API connection using previously created credentials
-  Future<void> restoreAPIConnection() async {
-    String? clientId = dotenv.env['UNSHARP_API_KEY'];
+  // Future<void> restoreAPIConnection() async {
+  //   String? clientId = dotenv.env['UNSHARP_API_KEY'];
 
-    try {
-      final file = File('./credentials.json');
-      final cred = await file.readAsString();
-      if (cred == "") {
-        throw Exception("Empty creds");
-      }
-      reddit = draw.Reddit.restoreInstalledAuthenticatedInstance(cred,
-          clientId: clientId, userAgent: "CayPasSiAiguisay");
-      await _fetchLoggedRedditor();
-      connected = true;
-    } catch (e) {
-      return;
-    }
-  }
+  //   try {
+  //     final file = File('./credentials.json');
+  //     final cred = await file.readAsString();
+  //     if (cred == "") {
+  //       throw Exception("Aucun identifiant...");
+  //     }
+  //     reddit = draw.Reddit.restoreInstalledAuthenticatedInstance(cred,
+  //         clientId: clientId, userAgent: "CayPasSiAiguisay");
+  //     await _fetchLoggedRedditor();
+  //     connected = true;
+  //   } catch (e) {
+  //     return;
+  //   }
+  // }
 
-  /// Get the file that holds the log credentials
-  Future<File> getCredentialsFile() async {
-    final directory = await getApplicationDocumentsDirectory();
-    final path = directory.path;
-
-    return File('$path/credentials.json');
-  }
+  // Future<File> getCredentialsFile() async {
+  //   final directory = await getApplicationDocumentsDirectory();
+  //   final path = directory.path;
+  //   return File('$path/credentials.json');
+  // }
 
   Future<PostHolder> getFrontPage() async {
     List<Post> posts = [];
@@ -99,40 +102,36 @@ class RedditInterface {
     return PostHolder(posts: posts, drawInterface: draw.FrontPage(reddit));
   }
 
-  /// Creates an API connection and save credentials to a file
   Future<void> createAPIConnection() async {
     String? clientId = dotenv.env['UNSHARP_API_KEY'];
-    final file = await getCredentialsFile();
+    //final file = await getCredentialsFile();
 
     if (clientId == null) {
-      throw Exception("No UNSHARP_API_KEY env var found...");
+      throw Exception("La clef UNSHARP n'a pas été trouvée...");
     }
     reddit = draw.Reddit.createInstalledFlowInstance(
         clientId: clientId,
         userAgent: "CayPasSiAiguisay",
         redirectUri: Uri.parse("unsharp://reddit-redirect"));
-    // Present the dialog to the user
     final result = await FlutterWebAuth.authenticate(
       url: reddit.auth.url(["*"], "unsharp", compactLogin: true).toString(),
       callbackUrlScheme: "unsharp",
     );
 
-    // Extract token from resulting url
     final code = Uri.parse(result).queryParameters['code'];
 
     await reddit.auth.authorize(code.toString());
-    await file.writeAsString(reddit.auth.credentials.toJson());
+    //await file.writeAsString(reddit.auth.credentials.toJson());
     await _fetchLoggedRedditor();
     connected = true;
   }
 
-  /// Close API connection and delete credentials
   Future<void> stopAPIConnection() async {
-    File credentials = await getCredentialsFile();
+    // File credentials = await getCredentialsFile();
 
-    if (credentials.existsSync()) {
-      await credentials.delete();
-    }
+    // if (credentials.existsSync()) {
+    //   await credentials.delete();
+    // }
     connected = false;
   }
 

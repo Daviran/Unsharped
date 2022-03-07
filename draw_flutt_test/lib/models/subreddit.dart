@@ -6,17 +6,11 @@ import './reddit_interface.dart';
 
 class Subreddit extends PostHolder {
   final String displayName;
-
   int membersCount = 0;
-
   String description = "";
-
   final String link;
-
   String bannerUrl = "";
-
   final String pictureUrl;
-
   bool subscribed;
 
   Subreddit.fromDRAW(var drawInterface, List<Post> posts)
@@ -45,7 +39,6 @@ class Subreddit extends PostHolder {
     description = HtmlUnescape().convert(description);
   }
 
-  /// Call API to notify subscribtion, add name of the subreddit in redditor's subscribtion list
   Future<void> subscribe() async {
     await drawInterface.subscribe();
     GetIt.I<RedditInterface>()
@@ -54,7 +47,6 @@ class Subreddit extends PostHolder {
         .add(displayName);
   }
 
-  /// Call API to notify unsubscribtion, remove name of the subreddit in redditor's subscribtion list
   Future<void> unsubscribe() async {
     await drawInterface.unsubscribe();
     GetIt.I<RedditInterface>()
