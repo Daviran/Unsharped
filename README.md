@@ -20,7 +20,7 @@ Unsharped est un projet à l'origine conçu en C#, puis après une bonne semaine
 - **DRAW** (Reddit API Wrapper).
 - Android Studio pour émuler les smartphones Android.
 
-## Documentation technique
+## Documentations diverses
 
 Cliquez [ici](https://github.com/EpitechMscProPromo2024/T-DEV-600-LIL-6-1-redditech-david.bugnon/blob/main/docuTech.md) pour la documentation technique <br>
-Et [ici]() pour la documentation utilisateur
+Et [ici]() pour un exemple visuel de l'application
