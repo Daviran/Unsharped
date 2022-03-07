@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/example/cay_pas_si_sharp/BuildConfig.java
- com.example.cay_pas_si_sharp.BuildConfig
