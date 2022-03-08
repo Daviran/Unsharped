@@ -68,8 +68,9 @@ class _UnsharpPageState extends State<UnsharpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer:
+          UnsharpEndDrawer(user: GetIt.I<RedditInterface>().loggedRedditor),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromRGBO(129, 50, 168, 1),
         elevation: 0,
         title: widget.title == null
@@ -79,13 +80,20 @@ class _UnsharpPageState extends State<UnsharpPage> {
             : Text(widget.title!,
                 style: const TextStyle(
                     color: Colors.white, fontSize: 18, fontFamily: "Base02")),
+        actions: [
+          Builder(
+              builder: (context) => IconButton(
+                  onPressed: () => Scaffold.of(context).openEndDrawer(),
+                  icon: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        GetIt.I<RedditInterface>().loggedRedditor.pictureUrl),
+                  )))
+        ],
       ),
       drawer: UnsharpDrawer(
           user: GetIt.I<RedditInterface>().loggedRedditor,
           subreddits: GetIt.I<RedditInterface>().loggedRedditor.subSubreddits),
       body: widget.body == null ? body : widget.body,
-      endDrawer:
-          UnsharpEndDrawer(user: GetIt.I<RedditInterface>().loggedRedditor),
       bottomNavigationBar: BottomNavigationBar(
         selectedFontSize: 15,
         selectedIconTheme: const IconThemeData(
