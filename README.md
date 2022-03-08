@@ -1,6 +1,6 @@
 # Unsharped : Un projet C# qui a mal tourné
 
-Unsharped est un projet à l'origine conçu en C#, puis après une bonne semaine de réflexion est devenu peu à peu un projet Flutter, qui est un langage assez intéressant et qui permet d'ouvrir des horizons plus larges ( cross-platform). 
+Unsharped est un projet à l'origine conçu en C#, puis après une bonne semaine de réflexion est devenu peu à peu un projet Flutter, qui est un langage DART assez intéressant et qui permet d'ouvrir des horizons plus larges ( cross-platform). 
 
 ## Fonctionnalités
 
@@ -23,4 +23,4 @@ Unsharped est un projet à l'origine conçu en C#, puis après une bonne semaine
 ## Documentations diverses
 
 Cliquez [ici](https://github.com/EpitechMscProPromo2024/T-DEV-600-LIL-6-1-redditech-david.bugnon/blob/main/docuTech.md) pour la documentation technique <br>
-Et [ici]() pour un exemple visuel de l'application
+Et [ici](https://github.com/EpitechMscProPromo2024/T-DEV-600-LIL-6-1-redditech-david.bugnon/blob/main/userGuide.md) pour un exemple visuel de l'application
