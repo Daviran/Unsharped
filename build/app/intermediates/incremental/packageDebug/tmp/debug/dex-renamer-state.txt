@@ -1,4 +1,0 @@
-#Tue Mar 08 11:23:41 CET 2022
-base.0=/home/daviran/Epitech/redditech/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
