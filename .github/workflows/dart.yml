@@ -4,7 +4,8 @@
 # documentation.
 
 name: Flutter
-
+env:
+  CI: false
 on:
   push:
     branches: [ main ]
@@ -26,4 +27,3 @@ jobs:
           flutter pub get
           flutter format --set-exit-if-changed .
           flutter analyze
-

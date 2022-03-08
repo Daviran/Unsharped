@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import './../models/comment.dart';
 import 'package:flutter/material.dart';
 import 'package:time_elapsed/time_elapsed.dart';

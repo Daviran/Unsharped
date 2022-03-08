@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:draw_flutt_test/models/redditor.dart';
 import 'package:flutter/material.dart';
 import './../models/redditor.dart';

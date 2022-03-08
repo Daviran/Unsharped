@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:draw/draw.dart' as draw;
 import 'post.dart';
 import 'package:flutter/material.dart';

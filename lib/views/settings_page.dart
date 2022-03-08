@@ -1,6 +1,7 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import '../models/redditor.dart';
-import './unsharp_page.dart';
 
 class SettingsPageView extends StatefulWidget {
   Redditor user;

@@ -1,3 +1,5 @@
+// ignore_for_file: must_call_super
+
 import 'package:flutter/material.dart';
 import '../../../models/post.dart';
 import '../../loading_widget.dart';

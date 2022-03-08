@@ -1,7 +1,6 @@
 import './../controllers/post_page.dart';
 import './../controllers/subreddit_page.dart';
 import './../views/widgets/postContent/post_content.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './../models/post.dart';
 import 'package:time_elapsed/time_elapsed.dart';

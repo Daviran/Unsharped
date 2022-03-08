@@ -1,3 +1,5 @@
+// ignore_for_file: must_call_super
+
 import '../../loading_widget.dart';
 
 import '../../../models/post.dart';

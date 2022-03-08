@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, must_be_immutable
+
 import 'package:draw_flutt_test/controllers/home_page.dart';
 import 'package:draw_flutt_test/controllers/search_page.dart';
 import 'package:draw_flutt_test/controllers/settings_page.dart';
@@ -93,7 +95,7 @@ class _UnsharpPageState extends State<UnsharpPage> {
       drawer: UnsharpDrawer(
           user: GetIt.I<RedditInterface>().loggedRedditor,
           subreddits: GetIt.I<RedditInterface>().loggedRedditor.subSubreddits),
-      body: widget.body == null ? body : widget.body,
+      body: widget.body ?? body,
       bottomNavigationBar: BottomNavigationBar(
         selectedFontSize: 15,
         selectedIconTheme: const IconThemeData(

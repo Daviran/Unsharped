@@ -6,7 +6,6 @@ import './controllers/redditor_page.dart';
 import './controllers/login_page.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import './controllers/home_page.dart';
 import './models/reddit_interface.dart';
 import './controllers/search_page.dart';
 import './controllers/post_page.dart';
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         title: 'Unsharp',
         theme: ThemeData(
             brightness: Brightness.light,
-            primaryColor: Color.fromARGB(255, 0, 0, 0)),
+            primaryColor: const Color.fromARGB(255, 0, 0, 0)),
         initialRoute: connected ? "/home" : "/login",
         onGenerateRoute: (settings) {
           Map routes = {

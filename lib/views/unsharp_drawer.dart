@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:draw_flutt_test/models/subreddit.dart';
 import 'package:draw_flutt_test/views/loading_widget.dart';
 import 'package:flutter/material.dart';

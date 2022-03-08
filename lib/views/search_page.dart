@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import '../controllers/subreddit_page.dart';
 import '../models/subreddit.dart';
 import 'loading_widget.dart';
