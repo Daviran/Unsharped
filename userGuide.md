@@ -16,5 +16,5 @@ Et le tiroir de droite permet d'accéder à notre profil et ses détails [(voir 
 La barre de [recherche](https://github.com/Daviran/Unsharped/blob/main/images/Search.jpg?raw=true) permet de rechercher différents subreddits et de s'y abonner.
 
 
-En appuyant sur [Options](https://github.com/Daviran/Unsharped/blob/main/images/settings.jpg?raw=true) on peut modifier les préférences utilisateurs, ainsi que mettre en place un thème nuit. 
+En appuyant sur [Options](https://github.com/Daviran/Unsharped/blob/main/images/Settings.jpg?raw=true) on peut modifier les préférences utilisateurs, ainsi que mettre en place un thème nuit. 
 
